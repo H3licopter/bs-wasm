@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>BS WASM test output</title>
+  </head>
+  <body>
+    <h1 id="output"></h1>
+    <script type="module">
+      import init, { parse_int_expr } from "./pkg/bs_wasm_generator.js";
+      init().then(() => {
+        console.log(parse_int_expr(`3 + 4`));
+      });
+    </script>
+  </body>
+</html>
